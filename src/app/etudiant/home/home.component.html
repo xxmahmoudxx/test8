@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th hidden scope="col">Id</th>
+          <th scope="col">Nom</th>
+          <th scope="col">Prenom</th>
+          <th scope="col">Adresse</th>
+          <th scope="col">Cin</th>
+          <th colspan="2" >Action</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of alletudiant, let i=index">
+          <th scope="row">{{ i+1 }}</th>
+          <th scope="row" hidden>{{ item.id_etu }}</th>
+          <td>{{ item.nom }}</td>
+          <td>{{ item.prenom }}</td>
+          <td>{{ item.adresse }}</td>
+          <td>{{ item.cin }}</td>
+          <td>
+            <!-- Add your action icons or buttons here -->
+            <span class="action-icon" >✏️</span>
+            <span class="action-icon" >🗑️</span>
+            <span class="action-icon" >ℹ️</span>
+
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
